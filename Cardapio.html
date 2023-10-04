@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu Restaurante</title>
+    <link rel="stylesheet" href="stylespg1.css">
+</head>
+<body>
+    <header>
+        <h1>Cardápio do Restaurante</h1>
+    </header>
+
+    <div class="menu-container">
+        <div class="menu-item">
+            <span>ENTRADAS:</span>
+        </div>
+        <br>
+        <div class="menu-item">
+            <span>Batata frita</span>
+            <span>R$ 18,00</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Bolinho de Feijoada(6und)</span>
+            <span>R$ 22,00</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Isca de Frango(12und)</span>
+            <span>R$ 30,00</span>
+        </div>
+        <br>
+        <div class="menu-item">
+            <span>PRATOS PRINCIPAIS:</span>
+        </div>
+        <br>
+        <div class="menu-item">
+            <span>Feijoada(500g)</span>
+            <span>R$ 39,90</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Bife acebolado</span>
+            <span>R$ 29,90</span>
+        </div>
+        
+        <div class="menu-item">
+            <span>Filé de Frango</span>
+            <span>R$ 24,90</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Filé de Peixe Frito</span>
+            <span>R$ 33,90</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Figado acebolado</span>
+            <span>R$ 19,90</span>
+        </div>
+        <br>
+        <div class="menu-item">
+            <span>SOBREMESAS:</span>
+        </div>
+        <br>
+        <div class="menu-item">
+            <span>Petit gateau</span>
+            <span>R$ 21,90</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Pudim de leite</span>
+            <span>R$ 15,90</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Brownie</span>
+            <span>R$ 10,90</span>
+        </div>
+    </div>
+    <br>
+    <button id="meuBotao">MENU INTERATIVO COM IMAGENS</button>
+    <script>
+        var botao = document.getElementById("meuBotao");
+
+        botao.addEventListener("click", function() {
+            botao.style.backgroundColor = "#e74c3c";
+            window.location.href = "Cardapio_Interativo.html";
+        });
+    </script>
+</body>
+</html>

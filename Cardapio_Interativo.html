@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com IMG</title>
+    <link rel="stylesheet" href="stylespg2.css">
+</head>
+<body>
+    <header>
+        <h1>Faça seu pedido</h1>
+    </header>
+   
+    <div class="container">  
+        <section class="pratos" id="entradas">      
+            <h2>Entrada</h2>
+            <input type="radio" name="entrada" value="batata">Batata frita
+            <br>
+            <input type="radio" name="entrada" value="bolinhofeijao">Bolinho de Feijoada(6und)
+            <br>
+            <input type="radio" name="entrada" value="iscafrango">Isca de Frango(12und)
+        </section>
+
+        <section class="pratos" id="pratos-principais">
+            <hr>
+            <h2>Pratos principais</h2>
+            <input type="radio" name="principal" value="feijoada">Feijoada(500g)
+            <br>
+            <input type="radio" name="principal" value="bifeacebo">Bife acebolado
+            <br>
+            <input type="radio" name="principal" value="filedefrango">Filé de Frango
+            <br>
+            <input type="radio" name="principal" value="filedepeixef">Filé de Peixe Frito
+            <br>
+            <input type="radio" name="principal" value="figadoacebolado">Figado acebolado
+        </section>
+
+        <section class="pratos" id="sobremesas">
+            <hr>
+            <h2>Sobremesas</h2>
+            <input type="radio" name="sobremesa" value="petitgateu">Petit gateau
+            <br>
+            <input type="radio" name="sobremesa" value="pudim">Pudim de leite
+            <br>
+            <input type="radio" name="sobremesa" value="brownie">Brownie
+        </section>
+        
+        <button id="confirmarpedido">Confirmar Pedido</button>
+        
+        <section id="pratosescolhidos">
+            <img id="batata" src="img/papasfritas.jpg" alt="Batata frita" class="esconde">
+            <img id="bolinhofeijao" src="img/bolinhofeijao.jpg" alt="Bolinho de Feijoada(6und)" class="esconde">
+            <img id="iscafrango" src="img/iscadefrango.jpg" alt="Isca de Frango(12und)" class="esconde">
+            <img id="feijoada" src="img/feijoada.jpg" alt="Feijoada(500g)" class="esconde">
+            <img id="bifeacebo" src="img/bifeacebolado.jpg" alt="Bife acebolado" class="esconde">
+            <img id="filedefrango" src="img/filedefrango.jpg" alt="Filé de Frango" class="esconde">
+            <img id="filedepeixef" src="img/filedepeixe.jpg" alt="Filé de Peixe Frito" class="esconde">
+            <img id="figadoacebolado" src="img/figadoacebolado.jpg" alt="Figado acebolado" class="esconde">
+            <img id="petitgateu" src="img/petitgateu.jpg" alt="Petit gateau" class="esconde">
+            <img id="pudim" src="img/pudim.jpg" alt="Pudim de leite" class="esconde">
+            <img id="brownie" src="img/brownie.jpg" alt="Brownie" class="esconde">
+        </section>
+
+    </div> 
+
+    <script>
+    document.getElementById('confirmarpedido').addEventListener('click', function() {
+        const imagens = document.querySelectorAll('#pratosescolhidos img');
+        imagens.forEach(imagem => {
+            imagem.classList.remove('mostra');
+            imagem.classList.add('esconde');
+        });
+        
+        const radios = document.querySelectorAll('input[type=radio]');
+        radios.forEach(radio => {
+            if (radio.checked) {
+                const id = radio.value;
+                const imagem = document.getElementById(id);
+                imagem.classList.remove('esconde');
+                imagem.classList.add('mostra');
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

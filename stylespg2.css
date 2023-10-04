@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+header {
+    background-color: crimson;
+    color: gold;
+    text-align: center;
+    padding: 20px 0;
+}
+.esconde {
+    display: none;
+}
+.mostra{
+    display: inline;
+    padding: 10px;
+}
+#pratosescolhidos img{
+    width: 200px;
+    height: 200px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+.pratos{
+    margin-bottom: 20px;
+}
